@@ -6,11 +6,13 @@
 
 #define __BUILD_GETDERV(type)			\
 						\
-bool getderv_##type(type data[], int size)
+void getderv_##type(type data[], int size)
 
 __BUILD_GETDERV(int16_t);
 __BUILD_GETDERV(int32_t);
 
 #undef __BUILD_GETDERV
+
+#define __DERV_ERROR_O4
 
 #endif
